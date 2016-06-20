@@ -1,0 +1,116 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> De-bug: 一鍵跑版</title><meta name="description" content="Your future is my design."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="/css/customize.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link active">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/abalone0204" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/TinyDenny" target="_blank" class="nav-list-link">TWITTER</a></li><li class="nav-list-item"><a href="https://www.linkedin.com/in/denny-ku-a9a21396?trk=hp-identity-name" target="_blank" class="nav-list-link">LINKEDIN</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><ul class="home post-list"><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/06/16/clv-beta-version/" class="post-title-link">寫在 Clairvoyance 發布之後：軟體開發者的社會責任</a></h2><div class="post-time">Jun 16, 2016<div class="tags"><a href="/tags/serverless/" class="tag-link">#serverless</a><a href="/tags/clairvoyance/" class="tag-link">#clairvoyance</a><a href="/tags/chrome-extension/" class="tag-link">#chrome-extension</a></div></div><div class="post-content"><blockquote>
+<p>這篇可能不會講到太多直接跟技術相關的東西，</p>
+<p>如果你對這個東西怎麼寫出來比較有興趣的話，</p>
+<p>可以看這篇：<a href="http://abalone0204.github.io/2016/06/12/clv-dev-note/">Clairvoyance 是怎麼開發的</a></p>
+<p>主要是希望這次從開發到現在較多人使用，</p>
+<p>中間受到許多幫助和指點的經驗，能夠被記錄下來，</p>
+<p>假如以後有人遇到一樣的事情能從中借鏡。</p>
+<p>當然，這也是對自己的一個反省。</p>
+</blockquote>
+<p>首先還是得先講一下求職天～眼通是什麼。</p>
+<p>它其實就是個 chrome 的 extension，</p>
+<p>裝了它以後，能在人力銀行的職缺下方給評論，以及看到其他人給的評論，</p>
+<p>載點在這裡：</p>
+<p><a href="https://chrome.google.com/webstore/detail/clairvoyance-%E6%B1%82%E8%81%B7%E5%A4%A9%E7%9C%BC%E9%80%9A/mdneakdlnoidknagkamfeambdefhppbi?hl=zh-TW&amp;gl=TW"><img src="https://raw.githubusercontent.com/abalone0204/Clairvoyance/master/chrome-store-available.png" alt="pic"></a></p>
+<p>其他說明的話 <a href="https://www.ptt.cc/bbs/Soft_Job/M.1465759641.A.E57.html">ptt 上的文章</a>會清楚得多。</p>
+<p><img src="http://i.imgur.com/QvYeAmN.png" alt="Jean Grey and Cyclops from Entertainment Weekly"></p>
+<blockquote>
+<p>Jean Grey and Cyclops from Entertainment Weekly</p>
+</blockquote>
+<h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><ul>
+<li><p><a href="#在開始動手寫程式之前">在開始動手寫程式之前</a></p>
+<ul>
+<li>只有這一小段會講到比較多技術相關的</li>
+</ul>
+</li>
+<li><p><a href="#發布-Beta-版本">發布 Beta 版本</a></p>
+</li>
+<li><p><a href="#收到回饋之後">收到回饋之後</a></p>
+</li>
+<li><p><a href="#商業化的迷思以及贊助管道">商業化的迷思以及贊助管道</a></p>
+</li>
+<li><p><a href="#未來方向">未來方向</a></p>
+</li>
+<li><p><a href="#一個軟體工作者的反思">一個軟體工作者的反思</a></p>
+</li>
+</ul></div><a href="/2016/06/16/clv-beta-version/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/06/12/clv-dev-note/" class="post-title-link">Clairvoyance 是怎麼開發的</a></h2><div class="post-time">Jun 12, 2016<div class="tags"><a href="/tags/serverless/" class="tag-link">#serverless</a><a href="/tags/chrome-extension/" class="tag-link">#chrome-extension</a><a href="/tags/career/" class="tag-link">#career</a><a href="/tags/job/" class="tag-link">#job</a></div></div><div class="post-content"><p>我寫了一個 chrome 的插件，</p>
+<p>能夠讓求職者在人力銀行的職缺下面留言討論。</p>
+<p>聽起來是很平常的需求，不過各大人力銀行就是不做這個功能，</p>
+<p>所以我想看看假如有這個功能會不會對求職有正向的幫助。</p>
+<p>下載的連結在這裡： <a href="https://chrome.google.com/webstore/detail/clairvoyance-%E6%B1%82%E8%81%B7%E5%A4%A9%E7%9C%BC%E9%80%9A/mdneakdlnoidknagkamfeambdefhppbi?hl=zh-TW&amp;gl=TW">Clairvoyance - 求職天眼通</a></p>
+<p>目前還在 beta 階段，可能會有些 bug，</p>
+<p>可以到<a href="https://www.facebook.com/Clairvoyance-%E6%B1%82%E8%81%B7%E5%A4%A9%E7%9C%BC%E9%80%9A-1084564708284768">粉絲頁</a>留言，</p>
+<p>或是在 <a href="https://github.com/abalone0204/Clairvoyance">github</a> 上直接發 issue。</p>
+<p>下面就來筆記一下為什麼要做這件事，以及怎麼做到的。</p>
+<p>用的技術就是以下列的這些</p>
+<ul>
+<li><p>front-end: reactjs、redux、redux-saga</p>
+</li>
+<li><p>back-end: aws-lambda, dynamodb, serverless-framework</p>
+</li>
+</ul>
+<blockquote>
+<p>目前只支援 104 和 1111，至於 yes123，後面會再提到為什麼暫時沒做。</p>
+</blockquote>
+<p>下面來簡介一下是怎麼做出來、以及為什麼要做。</p>
+<p><img src="https://raw.githubusercontent.com/abalone0204/Clairvoyance/master/static/intro.jpg" alt="clv intro"></p></div><a href="/2016/06/12/clv-dev-note/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/05/29/sls-fb-bot/" class="post-title-link">實作 Serverless 的 facebook messenger bot</a></h2><div class="post-time">May 29, 2016<div class="tags"><a href="/tags/serverless/" class="tag-link">#serverless</a><a href="/tags/fb/" class="tag-link">#fb</a><a href="/tags/bot/" class="tag-link">#bot</a></div></div><div class="post-content"><p>上禮拜簡單介紹了一下 serverless 的起手式後，</p>
+<p>我想再舉個更接近實際應用的例子，</p>
+<p>儘管並不是所有的應用都適合 serverless 的架構，</p>
+<p>但聊天機器人(chat bot)是一個相當好的例子，</p>
+<p>且讓我稍後再說明為什麼。</p>
+<p>今天就結合一下很實用的粉絲頁回覆機器人以及 serverless 。</p>
+<blockquote>
+<p>你可以把聊天機器人想成是你粉絲頁自動回覆的員工</p>
+<p>或是進行一些簡單的操作</p>
+<p>而聊天機器人流行起來的原因正是因為 mobile 裝置上的介面，</p>
+<p>並不能滿足於現代人操作的所有需求，</p>
+<p>聊天的介面解放了我們在小框框裡做事的限制。</p>
+<p>或者是你是小小公司的開發者，需要一個助理來幫你做很無腦或繁瑣的事情，</p>
+<p>再講下去可能要一篇了，如果你對這個主題有興趣，</p>
+<p>可以看看 <a href="https://wanqu.co/blog/2015-05-24-behind-the-scenes.html">灣區日報是如何運作的</a></p>
+</blockquote></div><a href="/2016/05/29/sls-fb-bot/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/05/22/serverless-simple-crud/" class="post-title-link">淺析 serverless 架構與實作</a></h2><div class="post-time">May 22, 2016<div class="tags"><a href="/tags/serverless/" class="tag-link">#serverless</a><a href="/tags/dynamodb/" class="tag-link">#dynamodb</a><a href="/tags/aws-lambda/" class="tag-link">#aws-lambda</a></div></div><div class="post-content"><p>Serverless ，不是沒有 server，而是不用去擔心維護 server 這件事，</p>
+<p>不管是在部署還是開發，都是以一個個 function 為單位，</p>
+<p>這帶來了程式碼上的高度 decoupling，但同時也因為過大的彈性，</p>
+<p>常常搞的我們無所適從，就像這張圖一樣：</p>
+<p><img src="http://i.imgur.com/lP3wcnh.jpg" alt="howto"></p>
+<p>serverless 更考驗著我們對系統設計的思維，</p>
+<p>這是一篇非常粗淺的文章，</p>
+<p>目的在帶領對 serverless 有興趣的人無痛的入門，</p>
+<p>不管是在概念上，還是在實務的使用上。</p>
+<blockquote>
+<p>假如你是懶得看文章的人，可以直接到我的 <a href="https://github.com/abalone0204/serverless-demo-with-dynamodb-node">github repo</a> 上面看</p>
+<p>有哪裡寫錯的話可以提個 issue，覺得讚讚讚的話也可以給星星以茲鼓勵。</p>
+</blockquote></div><a href="/2016/05/22/serverless-simple-crud/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/05/14/redux-saga/" class="post-title-link">Saga Pattern 在前端的應用</a></h2><div class="post-time">May 14, 2016<div class="tags"><a href="/tags/redux/" class="tag-link">#redux</a><a href="/tags/saga/" class="tag-link">#saga</a><a href="/tags/redux-saga/" class="tag-link">#redux-saga</a></div></div><div class="post-content"><blockquote>
+<p>這是篇長文，你可以直接跳到<a href="/2016/05/14/redux-saga/#Catalogue">你想看的地方</a>就好<br>或是直接在 github 上面看我 step by step 的教學<br><a href="https://github.com/abalone0204/redux-thunk-to-saga-tutorial/commit/1a4455b23ce6bc434d17a8c2ebcbf9e80e922be5">redux-thunk-to-saga-tutorial</a></p>
+</blockquote>
+<p>先把結論講在一開始，這並不只是一個 library 的使用方法介紹而已，</p>
+<p>因為學習 saga pattern 對於前端工程師是有幫助的，</p>
+<p>主要不出以下三個概念：</p>
+<ul>
+<li><p>好的 UI/UX 該是一個畫面的 transaction</p>
+</li>
+<li><p>User 隨時能夠取消 transaction</p>
+</li>
+<li><p>滿足上述條件實作出來的資料流是要容易被測試的</p>
+</li>
+</ul>
+<p>那<code>redux-saga</code>到底是在解決什麼問題呢？</p>
+<p>答案：</p>
+<ul>
+<li><p>讓我們的非同步 action 能夠更好被開發、維護、測試。</p>
+</li>
+<li><p>讓我們用不同的方式來思考非同步的前端資料流</p>
+</li>
+</ul></div><a href="/2016/05/14/redux-saga/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/05/08/es6-generator-func/" class="post-title-link">淺入淺出 Generator Function</a></h2><div class="post-time">May 8, 2016<div class="tags"><a href="/tags/es6/" class="tag-link">#es6</a><a href="/tags/generator/" class="tag-link">#generator</a><a href="/tags/function/" class="tag-link">#function</a></div></div><div class="post-content"><p>es 2015 中有一項新的 feature 叫做 <strong>generator function</strong>，</p>
+<p>假如熟稔其他語言的人，</p>
+<p>可能都知道 generator function 是什麼，</p>
+<p>不過對於一位平常都在寫原生 JavaScript 的人，這就很新鮮了。</p>
+<blockquote>
+<p>當然，generator 就算在 es 裡面也不算是什麼太新鮮的東西。<br>畢竟跟 JavaScript 有關的東西大概超過一個月就算舊的了</p>
+</blockquote>
+<p>使用 Generator function 並不是一件求新求潮的一件事情，</p>
+<p>活用 Generator function 能讓測試以及開發非同步的程式碼都變得更直觀。</p>
+<p>這篇文章就來淺淺的介紹一下 Generator function 究竟是什麼。</p></div><a href="/2016/05/08/es6-generator-func/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/04/25/Super-tiny-compiler/" class="post-title-link">Super tiny compiler</a></h2><div class="post-time">Apr 25, 2016<div class="tags"><a href="/tags/compiler/" class="tag-link">#compiler</a><a href="/tags/JavaScript/" class="tag-link">#JavaScript</a></div></div><div class="post-content"><p>造一個超級小又可愛的 Compiler，</p>
+<p>沒有組語，只有 JavaScript。</p></div><a href="/2016/04/25/Super-tiny-compiler/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/04/25/migrate-to-hexo/" class="post-title-link">搬家到 Hexo</a></h2><div class="post-time">Apr 25, 2016<div class="tags"><a href="/tags/hexo/" class="tag-link">#hexo</a><a href="/tags/CI/" class="tag-link">#CI</a></div></div><div class="post-content"><p>雖然是在同個 repository，而且也是用 github page 來 host，</p>
+<p>但這次把 travis CI 加進來以後，改部落格變得方便多了！</p>
+<p>這樣就沒有理由阻止自己偷懶不寫文章了吧 XD</p></div><a href="/2016/04/25/migrate-to-hexo/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/02/01/circle-js-3/" class="post-title-link">做中學 Cycle.js（下）</a></h2><div class="post-time">Feb 1, 2016<div class="tags"><a href="/tags/cycle-js/" class="tag-link">#cycle.js</a><a href="/tags/observable/" class="tag-link">#observable</a></div></div><div class="post-content"><p>Model-View-Intent &amp; Component</p></div><a href="/2016/02/01/circle-js-3/" class="read-more">...more</a></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a href="/2016/01/24/circle-js-2/" class="post-title-link">做中學 Cycle.js（中）</a></h2><div class="post-time">Jan 24, 2016<div class="tags"><a href="/tags/cycle-js/" class="tag-link">#cycle.js</a><a href="/tags/observable/" class="tag-link">#observable</a></div></div><div class="post-content"><p>Drivers 和一些簡單的例子</p></div><a href="/2016/01/24/circle-js-2/" class="read-more">...more</a></article></li></ul></section><footer><div class="paginator"><a href="/page/2/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2016 <a href="http://abalone0204.github.com">Tsung-Chen Ku</a>, unless otherwise noted.</p></div></footer></div><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-76858432-1",'auto');ga('send','pageview');</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5730240d682815d7"></script></body></html>
